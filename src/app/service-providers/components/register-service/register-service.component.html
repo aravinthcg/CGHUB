@@ -3,31 +3,55 @@
     <div class="card">
       <div class="card-header">Register as Professional</div>
       <div class="card-body">
-        <form>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="exampleInputEmail1">User name</label>
+            <label for="exampleInputUser">User name</label>
             <input
               type="text"
               class="form-control"
-              id="exampleInputName"
+              id="exampleInputUser"
               aria-describedby="emailHelp"
               placeholder="Enter User name"
               formControlName="username"
+              [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
             />
+            <div
+              *ngIf="submitted && f['username'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['username'].errors['required']">
+                Username is required
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Phone number</label>
+            <label for="exampleInputPhone">Phone number</label>
             <input
-              type="number"
+              type="text"
               class="form-control"
-              id="exampleInputEmail1"
+              id="exampleInputPhone"
               aria-describedby="emailHelp"
               placeholder="Enter number"
               formControlName="phone"
+              [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }"
             />
+            <div
+              *ngIf="submitted && f['phone'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['phone'].errors['required']">
+                Phone number is required
+              </div>
+              <div *ngIf="f['phone'].errors['minLength']">
+                Phone number is invalid
+              </div>
+              <div *ngIf="f['phone'].errors['maxlength']">
+                Phone number is invalid
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">What do you do?</label>
+            <label for="exampleInputwhat">What do you do?</label>
             <input
               type="text"
               class="form-control"
@@ -45,14 +69,27 @@
               aria-describedby="emailHelp"
               placeholder="Enter email"
               formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
             />
+            <div
+              *ngIf="submitted && f['email'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
             <small id="emailHelp" class="form-text text-muted"
               >We'll never share your email with anyone else.</small
             >
           </div>
 
-          <button type="button" class="btn btn-primary" (click)="submit()">
-            Submit
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button
+            type="button"
+            (click)="onReset()"
+            class="btn float-right"
+          >
+            Reset
           </button>
         </form>
       </div>
