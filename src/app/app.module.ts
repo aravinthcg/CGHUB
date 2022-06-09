@@ -9,26 +9,28 @@ import { UserComponent } from './user/components/user/user.component';
 import { SuperAdminComponent } from './super-admin/components/super-admin/super-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { SerivceProviderModule } from './service-providers/serivce-provider.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServiceProviderComponent,
     HomeComponent,
     UserComponent,
-    SuperAdminComponent
+    SuperAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
+    SerivceProviderModule,
+
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

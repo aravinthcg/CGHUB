@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/components/home/home.component';
+import { RegisterServiceComponent } from './service-providers/components/register-service/register-service.component';
 import { ServiceProviderComponent } from './service-providers/components/service-provider/service-provider.component';
 import { SuperAdminComponent } from './super-admin/components/super-admin/super-admin.component';
 import { UserComponent } from './user/components/user/user.component';
@@ -15,7 +16,7 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./super-admin/super-admin.module').then(
+          import('./super-admin/components/super-admin/super-admin.module').then(
             (m) => m.SuperAdminModule
           ),
       },
@@ -34,7 +35,6 @@ const routes: Routes = [
   },
   {
     path: 'service-providers',
-    component: ServiceProviderComponent,
     children: [
       {
         path: '',

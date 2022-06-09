@@ -1,8 +1,20 @@
-section{
-    margin: 2%;
-    text-align: end;
+section {
+  margin: 2%;
+  text-align: end;
 }
 
-.example-card{
-    margin: 2%;
+.example-card {
+  margin: 2%;
+}
+
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+  color: blueviolet;
+  text-decoration: underline;
+  font-weight: 600;
+  width: 250px;
+  height: 70px;
+  line-height: 70px;
+  margin-left: 2%;
 }
