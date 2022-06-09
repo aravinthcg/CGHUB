@@ -25,6 +25,28 @@
             </div>
           </div>
           <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+            />
+            <div
+              *ngIf="submitted && f['email'].errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group">
             <label for="exampleInputPhone">Phone number</label>
             <input
               type="text"
@@ -50,45 +72,19 @@
               </div>
             </div>
           </div>
+
           <div class="form-group">
-            <label for="exampleInputwhat">What do you do?</label>
-            <input
-              type="text"
+            <label for="exampleFormControlTextarea1">What do you do?</label>
+            <textarea
               class="form-control"
-              id="exampleInputwhat"
-              placeholder="What do you do?"
               formControlName="description"
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-              formControlName="email"
-              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
-            />
-            <div
-              *ngIf="submitted && f['email'].errors"
-              class="invalid-feedback"
-            >
-              <div *ngIf="f['email'].errors['required']">Email is required</div>
-              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
-            </div>
-            <small id="emailHelp" class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
-          <button
-            type="button"
-            (click)="onReset()"
-            class="btn float-right"
-          >
+          <button type="button" (click)="onReset()" class="btn float-right">
             Reset
           </button>
         </form>
