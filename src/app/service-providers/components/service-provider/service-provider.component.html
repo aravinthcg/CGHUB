@@ -1,0 +1,46 @@
+<section>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" [routerLink]="['/Home']">
+      Back
+    </button>
+  </div>
+</section>
+
+<div
+  class="example-ripple-container mat-elevation-z4"
+  (click)="onClickRegister()"
+  matRipple
+>
+  Register as Professional
+</div>
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title class="header">Service Providers</mat-card-title>
+    <mat-card-subtitle class="sub_header">Hair services</mat-card-subtitle>
+    <img
+      mat-card-sm-image
+      src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1629973621437-ce5af9.png"
+    />
+  </mat-card-title-group>
+  <mat-card-content>
+    {{ description }}
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title class="header">Service Providers</mat-card-title>
+    <mat-card-subtitle class="sub_header"
+      >AC/Appliance Repair</mat-card-subtitle
+    >
+    <img
+      mat-card-sm-image
+      src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png"
+    />
+  </mat-card-title-group>
+  <mat-card-content>
+    Top AC/Appliance services in India at your Home
+  </mat-card-content>
+</mat-card>
+
+

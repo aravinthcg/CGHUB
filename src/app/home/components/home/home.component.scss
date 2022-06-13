@@ -1,0 +1,21 @@
+h1 {
+  color: rgb(238, 67, 67);
+  margin-bottom: 100px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 4px;
+
+  .header {
+    text-decoration: underline;
+    cursor: pointer;
+    color: darkcyan;
+  }
+  .sub_header {
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+}
