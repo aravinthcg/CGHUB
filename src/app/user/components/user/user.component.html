@@ -1,1 +1,245 @@
-<p>user works!</p>
+<div class="container-fluid text-center bg-light p-4">
+    <strong>Header</strong>
+  </div>
+  
+  <div class="bredcrumbs-section py-2">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent">
+          <li class="breadcrumb-item"><a href="#" class=" text-white">Home</a></li>
+          <li class="breadcrumb-item active  text-white" aria-current="page">Plumbers In Coimbatore</li>
+        </ol>
+      </nav>
+  
+      <div class="row">
+          <div class="col-md-8">
+              <h1 class="text-white mt-5">Plumbers in Coimbatore, India</h1>
+              <ul class="text-white pl-0">
+                  <li>Doorstep repair within 45 mins</li>
+                  <li>Protection Against Damage Upto INR 10,000</li>
+                  <li>30 day post-service guarantee</li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="card  sticky-md-top">
+              <div class="card-body bg-warning bg-gradient rounded">
+                <h2 class="card-title mb-0">Need Plumbers:</h2>
+                <button class="btn btn-primary btn-block" type="button">Book Now ></button>
+              </div>
+              <div class="card-footer">
+                  <div class="h2 text-success">4.71/<sub>5</sub></div>
+                  <p class="text-muted small">based on 3,65,025 rating</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <section class="content-area h-100">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 ">
+                <mat-tab-group>
+                  
+                  <mat-tab label="Description">                   
+                      <mat-card *ngFor="let bannerData of bannerData">
+                        <!-- <h2>Plumbers in Coimbatore, India</h2> -->
+                        <h2>{{bannerData.title}}</h2>
+                        <p>Get Plumbers in Coimbatore, India near you within 90 minutes.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sodales erat. Aenean imperdiet erat nunc, id congue nisl mollis ac. Aliquam viverra mollis scelerisque. Aenean commodo, ipsum in faucibus placerat, ipsum sapien rhoncus nibh, nec ultricies risus risus at neque. In sed nisl nec libero cursus egestas. In semper efficitur sem, in posuere magna euismod eget. Morbi et mauris sollicitudin eros tincidunt scelerisque.</p>
+                        <p>Mauris porttitor luctus fermentum. Curabitur venenatis tellus vel odio vehicula, vitae congue leo semper. Praesent vulputate imperdiet lacus, sed tincidunt neque vehicula ut. Mauris viverra molestie mi ac fermentum. Nunc blandit sit amet enim et lobortis. Fusce augue quam, dignissim sed rhoncus vitae, volutpat ut lacus. Nam arcu eros, aliquet a sapien in, pharetra dapibus ex. Sed venenatis ornare nisl, at dignissim nibh lobortis vitae.</p>
+                      </mat-card>
+                  </mat-tab>
+  
+                  <mat-tab label="FAQs">
+                    <mat-card>
+                        <h2>Frequently Asked Questions</h2>
+
+                        <mat-accordion  *ngFor="let faqData of faqListData">
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false"  >
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                {{faqData.question}}
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            {{faqData.answer}}
+                          </mat-expansion-panel>
+<!--   
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Is there any guarantee on the service provided?
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sodales erat. Aenean imperdiet erat nunc, id congue nisl mollis ac. Aliquam viverra mollis scelerisque. Aenean commodo, ipsum in faucibus placerat, ipsum sapien rhoncus nibh, nec ultricies risus risus at neque. In sed nisl nec libero cursus egestas. In semper efficitur sem, in posuere magna euismod eget. Morbi et mauris sollicitudin eros tincidunt scelerisque.</p>
+                          </mat-expansion-panel>
+  
+                          <mat-expansion-panel (opened)="panelOpenState = true"
+                                               (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                What if no services are availed, how much will I be entitled to pay?
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sodales erat. Aenean imperdiet erat nunc, id congue nisl mollis ac. Aliquam viverra mollis scelerisque. Aenean commodo, ipsum in faucibus placerat, ipsum sapien rhoncus nibh, nec ultricies risus risus at neque. In sed nisl nec libero cursus egestas. In semper efficitur sem, in posuere magna euismod eget. Morbi et mauris sollicitudin eros tincidunt scelerisque.</p>
+                          </mat-expansion-panel>
+                           -->
+                        </mat-accordion>
+                        
+                    </mat-card>  
+                  </mat-tab>
+  
+                  <mat-tab label="Customer Reviews">
+                    <mat-card>
+                    <h2>Recent Customer Reviews</h2>
+                    <!-- <h1 class="text-success mb-2">4.71/<sub>5</sub></h1> -->
+                    <!-- <h4 class="text-muted">based on 3,65,025 ratings</h4> -->
+  
+                    <div class="">
+                      <div class="justify-content-center">
+                        <div class="col-12 mb-5">
+                          <div class="card p-4 text-center">
+                            <div class="row justify-content-left d-flex">
+                              <div class="col-md-3 flex-column">
+                                <div class="rating-box py-3 rounded">
+                                  <h1 class="mb-0"><strong>4.0</strong></h1>
+                                  <p class="">out of 5</p>
+                                </div>
+                              </div>
+  
+  
+                              <div class="col-md-9">
+                                <div class="rating-bar0 justify-content-center">
+  
+  
+                                  <table class="text-left mx-auto">
+                                    <tr>
+                                      <td class="rating-label">Excellent</td>
+                                      <td class="rating-bar">
+                                        <div class="bar-container">
+                                            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                          </div>
+                                      </td>
+                                      <td class="text-right">123</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="rating-label">Good</td>
+                                      <td class="rating-bar">
+                                        <div class="bar-container">
+                                          <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+                                          </div>
+                                      </td>
+                                      <td class="text-right">23</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="rating-label">Average</td>
+                                      <td class="rating-bar">
+                                        <div class="bar-container">
+                                          <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+                                          </div>
+                                      </td>
+                                      <td class="text-right">10</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="rating-label">Poor</td>
+                                      <td class="rating-bar">
+                                        <div class="bar-container">
+                                          <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                                          </div>
+                                      </td>
+                                      <td class="text-right">3</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="rating-label">Terrible</td>
+                                      <td class="rating-bar">
+                                        <div class="bar-container">
+                                          <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+                                          </div>
+                                      </td>
+                                      <td class="text-right">0</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+  
+  
+  
+                        <div class="card p-3" *ngFor="let userData of userReviewData">
+                            <div class="d-flex">
+                                    <img class="profile-pic" src={{userData.image}}>
+                                <div class="">
+                                    <h3 class="mb-0">{{userData.name}}</h3>
+                                    <p class="text-muted mb-0">{{userData.date}}</p>
+                                    <p class="text-muted">{{userData.rating}}</p>
+                                </div>
+                              <!-- <div class="ml-auto"></div> -->
+                            </div>
+                            <div>
+                                <p class="content mb-0">{{userData.comment}}</p>
+                            </div>
+                            <!-- {{userData | json}} -->
+                        </div>
+                          
+
+                        </div>
+                      </div>
+                    </div>
+  
+  
+  
+  
+  
+                    </mat-card> 
+                  </mat-tab>
+                  
+                  <mat-tab label="About Plumbers">
+                    <mat-card>
+                      <h2>About Plumbers</h2>
+  
+                      <h3>Plumbing services</h3>
+                      <p>Our life comes to a halt when there’s some problem with the plumbing, which can range from a minor leaking faucet all the way to a major pipe leak. 
+                        With all the work, you hardly get any time to find a reliable plumber at reasonable rates.
+                         Urban Company’s plumbers in Coimbatore, India provide a doorstep repair within 45 minutes. A 30-day post service guarantee is provided. Also, Urban Company provides protection against damage upto INR 10,000.
+                        Urban Company ensures that you get the best plumbing services in Coimbatore, India.</p>
+  
+                      <h3>How are Urban Company Plumbers different from local Plumbers?</h3>
+                      <p>While everytime you book a local plumber, you remain skeptical about the kind of person who is entering your personal space. At Urban Company, all the plumbers are background verified. You don’t need to worry about you safety as it is important to us. Urban Company is the place where you get reliable plumbing from.</p>
+  
+                      <h3>What plumbing services Urban Company offers?</h3>
+                      <p>Any kind of obstruction in plumber fitting, such as a clogged pipe or running toilet, can bring your entire schedule to a standstill, while at the same time disrupting your normalcy of everyday life. Given that materials such as pipes and cisterns, which are used in building your living space, come with an expiry date, you need to keep them updated and in a working condition. Some materials or machines require constant maintenance while others require replacements and fixes.
+                        Urban Company plumbers in Coimbatore, India provide the best plumbing solutions.
+                        Professional Plumbing Services offered by Urban Company - </p>
+                      <ul>
+                        <li>Installation: Local plumbers charge high prices even if the service availed is just a tap installation. Get your plumbing installation done by best plumbers in Coimbatore, India and that too, at great prices.</li>
+                        <li>Repairs and fixes: Getting a jet spray repaired doesn’t have to be inconvenient now. You can get a plumber at home in Coimbatore, India at your preferred time. Book a plumber repair service now!</li>
+                        <li>Replacement: You can get a flush tank or toilet seat cover replaced easily and efficiently.</li>
+                        <li>Cleaning: Now, you don’t have to overthink about cleaning your water tanks. You can sit back while Urban Company’s professional plumbers in Coimbatore, India do the task for you. Get your underground/overhead water tanks cleaned at affordable rates.</li>
+                        <li>Plumbers on demand: This consists of a 30-minute plumbing service. You can get any plumbing service done at an hourly rate.</li>
+                        <li>Full day plumber booking: This includes 8 hours of plumbing services.</li>
+                      </ul>
+
+                    </mat-card>
+                  </mat-tab>
+                </mat-tab-group>
+              </div>
+  
+  <!--             
+              <div class="col-md-4">
+  
+              </div> -->
+  
+          </div>
+      </div>
+  </section>
+
+
+  
+  <!-- 
+  <div class="container-fluid text-center text-white bg-dark p-4">
+    <strong>Footer</strong>
+  </div> -->

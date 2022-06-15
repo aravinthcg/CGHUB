@@ -1,0 +1,59 @@
+[{
+    "user_review":[
+        {
+            "image": "../../assets/images/plumber.jpg",
+            "name": "Hrushikesh",
+            "date":"2-01-2022",
+            "rating": "5",
+            "comment":"Lorem ipsumlorem iosn"
+        },
+        {
+            "image": "../../assets/images/plumber.jpg",
+            "name": "Ganesh",
+            "date":"2-01-2022",
+            "rating": "5",
+            "comment":"Lorem ipsumlorem iosn"
+        },
+        {
+            "image": "../../assets/images/plumber.jpg",
+            "name": "Ganesh",
+            "date":"2-01-2022",
+            "rating": "5",
+            "comment":"Lorem ipsumlorem iosn"
+        }
+    ],
+
+    "faq":[
+        {
+            "question":"What is Lorem Ipsum?",
+            "answer":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        },
+        {
+            "question":"Why do we use it?",
+            "answer":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution"
+        },
+        {
+            "question":"Where does it come from?",
+            "answer":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
+        },
+        {
+            "question":"Where can I get some?",
+            "answer":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet"
+        },
+        {
+            "question":"Where can I get some?",
+            "answer":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet"
+        }
+    ],
+
+    "bannerHeading":[
+        {
+            "title": "Plumbers in Coimbatore, India"
+
+        }
+    ]
+}
+]
+
+
+

@@ -13,6 +13,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SerivceProviderModule } from './service-providers/serivce-provider.module';
 
+
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +30,14 @@ import { SerivceProviderModule } from './service-providers/serivce-provider.modu
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     SerivceProviderModule,
-
     MatCardModule,
     MatButtonModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatProgressBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
